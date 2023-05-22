@@ -1,0 +1,312 @@
+
+  
+body {
+    margin: 0;
+}
+
+.image_container{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.image_container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.header .slider {
+   
+    background-size:cover;
+    height:600px
+}
+
+.header .slider .intro {padding-top:200px;text-align:center;color:#FFF}
+
+.header .slider .intro h2 {
+    margin:0 auto;
+    font-size:50px;
+    width:600px;
+    border-top:4px solid #FFF;
+    border-bottom:4px solid #FFF;
+    padding:5px 0;
+    color:#FFF
+}
+
+.header .slider .intro button {
+    background:none;
+    margin-top:30px;
+    font-size:20px;
+    border:2px solid #FFF;
+    font-weight:bold;
+    padding:10px 30px
+}
+
+.header .navbar {background-color:#252F31;color:#FFF;overflow:hidden}
+
+.header .navbar h2 {color:#FFF}
+
+.header .navbar h2 span {color:#2ecc71}
+
+.header .navbar ul {
+    list-style:none;
+    padding-left:0;
+    overflow:hidden;
+    float:right
+}
+
+.header .navbar ul li {float:left;padding:10px}
+
+.header .navbar ul li a {color:#FFF;text-decoration:none}
+
+.header .navbar ul li.active a,
+.header .navbar ul li a:hover {color:#30B576}
+
+
+
+.features {
+    overflow:hidden;
+    padding-top:40px;
+    padding-bottom:50px
+}
+
+.features .feat {width:33.33333%;height:150px}
+
+
+
+.about-me {
+    background-color:#F2F2F2;
+    overflow:hidden;
+    margin-top: 90px;
+}
+
+.about-me .image {width:40%}
+
+.about-me .image img {width:100%}
+
+.about-me .info {width:60%}
+
+.about-me .info h2 {margin:25px 0 20px 40px}
+
+.about-me .info > p {margin:0 0 10px 40px}
+
+.about-me .info > p:last-of-type {margin-top:25px}
+
+.about-me .info .hobbies {overflow:hidden;margin:15px 0 0 40px}
+
+.about-me .info .hobbies .content {width:50%;overflow:hidden}
+
+.about-me .info .hobbies .content .icon {width:12%;margin-right:5%}
+
+.about-me .info .hobbies .content .icon i {margin-top:30px;color:#2DCC70}
+
+.about-me .info .hobbies .content .text {width:83%}
+
+.about-me .info .hobbies .content .text p {margin-top:0}
+
+.about-me .info .hobbies .content .text h3 {margin-bottom:5px}
+
+
+.my-skills {
+    padding-top:30px;
+    padding-bottom:50px;
+    overflow:hidden
+}
+
+.my-skills .skills, 
+.my-skills .progress {width:50%}
+
+.my-skills .skills h2 {margin:25px 0 20px 40px}
+
+.my-skills .skills p {margin:0 0 10px 40px}
+
+.my-skills .skills p:last-of-type {margin-top:25px}
+
+.my-skills .skills button {margin-top:20px;margin-left:40px}
+
+.my-skills .progress .technique {margin-left:50px}
+
+.my-skills .progress .technique div {background-color:#F2F2F2;height:25px}
+
+.my-skills .progress .technique div span {
+    background-color:#2DCC70;
+    height:25px;
+    display:block;
+    line-height:25px;
+    text-align:right;
+    color:#FFF;
+    font-weight:bold
+}
+
+
+
+.my-education {padding-top:30px;padding-bottom:30px;overflow:hidden}
+
+.my-education hr {margin:20px 0;background-color:#000000;height:1px;border:0}
+
+.my-education .education {width:50%;margin-right:5%}
+
+.my-education .education h2 {margin:25px 0 20px 40px}
+
+.my-education .education p {margin:0 0 10px 40px}
+
+.my-education .education p:last-of-type {margin-top:25px}
+
+
+
+.my-education .exp h3 {margin-top:80px;margin-bottom:10px}
+
+.my-education .exp span {display:block;margin-bottom:10px}
+
+.my-education .exp span:first-of-type {color:#000000}
+
+.my-education .exp span:last-of-type {
+    background-color:#2DCC70;
+    color:#FFF;
+    display:inline-block;
+    padding:4px 10px
+}
+
+.my-education .container .exp{
+    background-color: rgba(45, 204, 112, 0.75);
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    
+}
+
+
+
+.work-experience {padding-top:30px;padding-bottom:30px;overflow:hidden}
+
+.work-experience hr {margin:20px 0;background-color:#999;height:1px;border:0}
+
+.work-experience .work {width:50%;margin-right:5%}
+
+.work-experience .work h2 {margin:25px 0 20px 40px}
+
+.work-experience .work p {margin:0 0 10px 40px}
+
+.work-experience .work p:last-of-type {margin-top:25px}
+
+.work-experience .exp {width:45%;float:left}
+
+.work-experience .exp h3 {margin-top:80px;margin-bottom:10px}
+
+.work-experience .exp span {display:block;margin-bottom:10px}
+
+.work-experience .exp span:first-of-type {color:#000000}
+
+.work-experience .container{
+    display: flex;
+}
+
+.work-experience .container .exp{
+    background-color: rgba(45, 204, 112, 0.75);
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.work-experiencen .exp span:last-of-type {
+    background-color:#2DCC70;
+    color:#FFF;
+    display:inline-block;
+    padding:4px 10px
+}
+
+.contact {
+    background-color:#252F31;
+    overflow:hidden;
+    padding-top:50px;
+    padding-bottom:70px
+}
+
+.contact .info {width:50%;margin-right:5%}
+
+.contact h2 {color:#FFF;margin-left:40px}
+
+.contact p {color:#6A6E71;margin-left:40px}
+
+.contact p strong {color:#D1D6DA}
+
+.contact .container .form {width:45%}
+
+.contact .form label {display:block;color:#D1D6DA;margin:10px 0}
+.contact .container .send-info .send input[type="email"],
+.contact .container .send-info .send input[type="text"] {
+    background-color:rgba(255, 255, 255, 0.875);
+    color:#000000;
+    padding:10px;
+    border:0;
+    border-radius: 10px;
+    width:100%;
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.contact .container .send-info .send textarea {
+    background-color:rgba(255, 255, 255, 0.875);
+    color:#000000;
+    padding:10px;
+    border:0;
+    border-radius: 10px;
+    width:100%;
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.contact .container .send-info .send .send-form {
+    background-color:#71dda0;
+    color:#000000;
+    padding:10px 20px;
+    border: none;
+    border-radius:  10px;
+    margin-top:10px;
+}
+.contact .container .send-info .send .send-form:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.contact .container .send-info .send {
+    background-color: rgba(45, 204, 112, 0.75);
+    display: flex;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+p {line-height:1.7;color:#000000}
+
+h2, h3 {color:#000000}
+
+.my-button {
+    background:none;
+    border:3px solid rgb(45, 204, 112);
+    padding:10px 30px;
+    color:#2DCC70;
+    font-weight:bold
+}
+
+.fl-left {float:left} 
+
+.text-center {text-align:center}
+
+.clearfix {clear:both}
+
+.container {width:1170px;margin:auto}
+

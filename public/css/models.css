@@ -1,0 +1,56 @@
+html {
+    font-family: sans-serif; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+}
+  
+body {
+    margin: 0;
+}
+
+.scroll-models {
+    display: flex;
+}
+
+.scroll-models .scroll-container {
+    margin-top: 90px;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.scroll-models .scroll-container .scroll-item {
+    display: flex;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 10px solid rgba(45, 204, 112, 0.75);
+    max-height: 220px;
+    max-width: 220px;
+    overflow: hidden;
+    justify-content: center;
+}   
+
+.scroll-models .scroll-container .scroll-item img{
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.scroll-models .scroll-container #model-viewer {
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+}
+
+.scroll-models .scroll-container .scroll-item img{
+    width: 200px;
+}
+canvas{
+    border: 1px;
+}

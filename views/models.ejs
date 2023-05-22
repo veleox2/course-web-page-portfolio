@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Valeriy Chepurnyi</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/models.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="./css/style.css/container">
+                <a href="/">
+                    <h2 class="fl-left" style="margin-left: 135px;">VaL<span>EriY</span></h2>
+                </a>
+                <ul style="margin-right: 135px;">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="https://www.linkedin.com/in/валерій-чепурний-27747a23a/" target="_blank">Linkedin</a>
+                    </li>
+                    <li><a href="https://sketchfab.com/veleox2" target="_blank">Sketchfab</a></li>
+                    <li><a href=" " target="_blank">Telegram</a></li>
+                    <li><a href="/models">Models</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-models">
+        <script async src="https://ga.jspm.io/npm:es-module-shims@1.7.2/dist/es-module-shims.js"></script>
+        <script type="importmap">
+                                {
+                                    "imports":{
+                                        "three": "https://unpkg.com/three@0.152.2/build/three.module.js"
+                                    }
+                                }
+                            </script>
+        <script type="module">
+            import * as THREE from 'three';
+            import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
+            import { GLTFLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/GLTFLoader.js';
+
+            function init(gl_model) {
+                console.log('error');
+
+                const renderer = new THREE.WebGLRenderer({ antialias: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer.domElement);
+
+                const scene = new THREE.Scene();
+                scene.background = new THREE.Color(0x000000);
+
+                const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.set(5, 5, 2.5);
+
+                const ambientLight = new THREE.AmbientLight(0xffffff);
+                scene.add(ambientLight);
+
+                const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+                scene.add(directionalLight);
+
+                const controls = new OrbitControls(camera, renderer.domElement);
+                controls.addEventListener('change', () => {
+                    renderer.render(scene, camera);
+                });
+                controls.target.set(0, 0, 0);
+                controls.update();
+
+                const loader = new GLTFLoader();
+                loader.load(gl_model, function (gltf) {
+                    const model = gltf.scene;
+                    model.position.set(0, 0, 0);
+                    scene.add(model);
+                    renderer.render(scene, camera);
+                }, undefined, function (error) {
+                    console.error(error);
+                });
+            }
+
+            window.addEventListener('DOMContentLoaded', () => {
+
+                const scrollItems = document.querySelectorAll('.scroll-item');
+                scrollItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        try {
+                            const canvas = document.querySelector('canvas');
+                            canvas.parentNode.removeChild(canvas);
+                        } catch (error) {
+                            console.log(error);
+                        }
+                        const model = item.getAttribute('data-model');
+                        init(model);
+                    });
+                });
+            });
+        </script>
+
+        <div class="scroll-container">
+            <div class="scroll-item" data-model="glft/free_porsche_911_carrera_4s.glb"><img src="./images/porcshe911.png"></div>
+            <div class="scroll-item" data-model="glft/free_iphone_13_pro_2021.glb"><img src="./images/iphone13.png"></div>
+            <div class="scroll-item" data-model="glft/iron_battle_axe.glb"><img src="./images/axe.png"></div>
+            <div class="scroll-item" data-model="glft/kar98k_free_model.glb"><img src="./images/kar98k.png"></div>
+            <div class="scroll-item" data-model="glft/sword_of_rohan_king.glb"><img src="./images/sword.png"></div>
+        </div>
+        <div id="model-viewer"></div>
+    </div>
+</body>
+
+</html>
